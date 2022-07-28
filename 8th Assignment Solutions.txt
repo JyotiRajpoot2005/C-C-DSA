@@ -209,7 +209,7 @@ int main()
 }
 __________________________________________________________________________________________
 
-//10.
+10.
 
 #include<stdio.h>
 int main()
@@ -224,8 +224,10 @@ int main()
                 {
                     if(j>=1 && j<=3)
                         printf("%d",k++);
-                    else
-                        printf("%d",k--);
+                    else if(i>=2 && i<=4)
+                        printf("%d",--k);
+                         else
+                            printf("%d",k--);
                 }
             else
                 printf(" ");
@@ -290,7 +292,7 @@ int main()
 }
 __________________________________________________________________________________________
 
-//13.
+13.
 
 #include<stdio.h>
 int main()
@@ -305,8 +307,10 @@ int main()
                 {
                     if(j>=1 && j<=6)
                         printf("%c",k++);
-                    else
-                        printf("%c",k--);
+                    else if(i>=2 && i<=7)
+                        printf("%c",--k);
+                         else
+                            printf("%c",k--);
                 }
             else
                 printf(" ");

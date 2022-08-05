@@ -1,0 +1,198 @@
+Assignment-13                 A Job Ready Bootcamp in C++, DSA and IOT
+______________               __________________________________________
+
+                                  More on Recursion in C Language
+                                 _________________________________
+
+
+
+
+
+1. Write a recursive function to calculate sum of first N natural numbers.
+
+#include<stdio.h>
+int Nsum(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=Nsum(a);
+    printf("sum of first %d natural numbers is %d",a,k);
+    return 0;
+}
+int Nsum(int n)
+{
+  int s;
+  if(n==1)
+     return 1;
+     s=n+Nsum(n-1);
+     return s;
+}
+_________________________________________________________________________________________
+
+2. Write a recursive function to calculate sum of first N odd natural numbers.
+
+#include<stdio.h>
+int oddsum(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=oddsum(a);
+    printf("sum of first %d odd natural numbers is %d",a,k);
+    return 0;
+}
+int oddsum(int n)
+{
+  int s;
+  if(n==1)
+     return 1;
+     s=2*n-1+oddsum(n-1);
+     return s;
+}
+_________________________________________________________________________________________
+
+3. Write a recursive function to calculate sum of first N even natural numbers.
+
+#include<stdio.h>
+int evensum(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=evensum(a);
+    printf("sum of first %d even natural numbers is %d",a,k);
+    return 0;
+}
+int evensum(int n)
+{
+  int s;
+  if(n==1)
+     return 2;
+     s=2*n+evensum(n-1);
+     return s;
+}
+_________________________________________________________________________________________
+
+4. Write a recursive function to calculate sum of squares of first n natural numbers
+
+#include<stdio.h>
+int sqrsum(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=sqrsum(a);
+    printf("sum of squares of first %d natural numbers is %d",a,k);
+    return 0;
+}
+int sqrsum(int n)
+{
+  int s;
+  if(n==1)
+     return 1;
+     s=n*n+sqrsum(n-1);
+     return s;
+}
+_________________________________________________________________________________________
+
+5. Write a recursive function to calculate sum of digits of a given number.
+
+#include<stdio.h>
+int digitsum(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=digitsum(a);
+    printf("sum of digits of %d is %d",a,k);
+    return 0;
+}
+int digitsum(int n)
+{
+  int s;
+  if(n==0)
+     return 0;
+     s=n%10+digitsum(n/10);
+     return s;
+}
+_________________________________________________________________________________________
+
+6. Write a recursive function to calculate factorial of a given number.
+
+#include<stdio.h>
+int fact(int);
+int main()
+{
+    int a,k;
+    printf("Enter a number");
+    scanf("%d",&a);
+    k=fact(a);
+    printf("factorial of %d is %d",a,k);
+    return 0;
+}
+int fact(int n)
+{
+  int s;
+  if(n==0 || n==1)
+     return 1;
+     s=n*fact(n-1);
+     return s;
+}
+_________________________________________________________________________________________
+
+7. Write a recursive function to calculate HCF of two numbers.
+
+#include<stdio.h>
+int hcf(int,int);
+int main()
+{
+    int a,b,k;
+    printf("Enter two numbers");
+    scanf("%d%d",&a,&b);
+    if(a>b)
+       k=hcf(a,b);
+    else
+       k=hcf(b,a);
+    printf("HCF of %d and %d is %d",a,b,k);
+    return 0;
+}
+int hcf(int n,int m)
+{
+  int s;
+  if(m==0)
+     return n;
+     s=hcf(m,n%m);
+     return s;
+}
+_________________________________________________________________________________________
+
+//8. Write a recursive function to print first N terms of Fibonacci series.
+
+#include<stdio.h>
+void fibo(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    fibo(a);
+    return 0;
+}
+void fibo(int n)
+{
+  int a=-1,b=1,c=0;
+  if(n==0)
+    return ;
+  fibo(n-1);
+  c=a+b;
+  a=b;
+  b=c;
+  printf("%d ",c);
+}
+_________________________________________________________________________________________

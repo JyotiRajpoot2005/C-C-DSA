@@ -1,0 +1,229 @@
+Assignment-12                A Job Ready Bootcamp in C++, DSA and IOT
+______________              __________________________________________
+
+                                     Recursion in C Language
+                                    _________________________
+
+
+
+
+
+1. Write a recursive function to print first N natural numbers.
+
+#include<stdio.h>
+void Nnatural(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Nnatural(a);
+    return 0;
+}
+void Nnatural(int n)
+{
+  if(n>0)
+  {
+     Nnatural(n-1);
+     printf("%d ",n);
+  }
+}
+_________________________________________________________________________________________
+
+2. Write a recursive function to print first N natural numbers in reverse order.
+
+#include<stdio.h>
+void Nrevrs(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Nrevrs(a);
+    return 0;
+}
+void Nrevrs(int n)
+{
+  if(n>0)
+  {
+     printf("%d ",n);
+     Nrevrs(n-1);
+  }
+}
+_________________________________________________________________________________________
+
+3. Write a recursive function to print first N odd natural numbers.
+
+#include<stdio.h>
+void Nodd(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Nodd(a);
+    return 0;
+}
+void Nodd(int n)
+{
+  if(n>0)
+  {
+     Nodd(n-1);
+     printf("%d ",2*n-1);
+  }
+}
+_________________________________________________________________________________________
+
+4. Write a recursive function to print first N odd natural numbers in reverse order
+
+#include<stdio.h>
+void Noddrevrs(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Noddrevrs(a);
+    return 0;
+}
+void Noddrevrs(int n)
+{
+  if(n>0)
+  {
+     printf("%d ",2*n-1);
+     Noddrevrs(n-1);
+  }
+}
+_________________________________________________________________________________________
+
+5. Write a recursive function to print first N even natural numbers.
+
+#include<stdio.h>
+void Neven(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Neven(a);
+    return 0;
+}
+void Neven(int n)
+{
+  if(n>0)
+  {
+     Neven(n-1);
+     printf("%d ",2*n-2);
+  }
+}
+_________________________________________________________________________________________
+
+6. Write a recursive function to print first N even natural numbers in reverse order.
+
+#include<stdio.h>
+void Nevenrevrs(int);
+int main()
+{
+    printf("Enter a number");
+    scanf("%d",&a);
+    Nevenrevrs(a);
+    return 0;
+}
+void Nevenrevrs(int n)
+{
+  int i;
+  if(n>0)
+  {
+     printf("%d ",2*n-2);
+     Nevenrevrs(n-1);
+  }
+}
+_________________________________________________________________________________________
+
+7. Write a recursive function to print squares of first N natural numbers
+
+#include<stdio.h>
+void Nsqr(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    Nsqr(a);
+    return 0;
+}
+void Nsqr(int n)
+{
+  if(n>0)
+  {
+     Nsqr(n-1);
+     printf("%d ",n*n);
+  }
+}
+_________________________________________________________________________________________
+
+8. Write a recursive function to print binary of a given decimal number.
+
+#include<stdio.h>
+void btod(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    btod(a);
+    return 0;
+}
+void btod(int n)
+{
+  if(n>0)
+  {
+     btod(n/2);
+     printf("%d",n%2);
+  }
+}
+_________________________________________________________________________________________
+
+9. Write a recursive function to print octal of a given decimal number.
+
+#include<stdio.h>
+void otod(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    otod(a);
+    return 0;
+}
+void otod(int n)
+{
+  if(n>0)
+  {
+     otod(n/8);
+     printf("%d",n%8);
+  }
+}
+_________________________________________________________________________________________
+
+10. Write a recursive function to print reverse of a given number.
+
+#include<stdio.h>
+void revrs(int);
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    revrs(a);
+    return 0;
+}
+void revrs(int n)
+{
+  if(n!=0)
+  {
+     printf("%d",n%10);
+     revrs(n/10);
+  }
+}
+_________________________________________________________________________________________    
